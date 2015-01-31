@@ -16,4 +16,9 @@ describe('MartianRobotTracker', function () {
   it('tracks on a planet', function () {
     expect(tracker.planet instanceof Planet).toBeTruthy();
   });
+
+  it('has the same boundaries as its planet', function () {
+    var planet = new Planet('5 3');
+    expect(tracker.getBounds()).toEqual(planet.getBounds());
+  });
 });
