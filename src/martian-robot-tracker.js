@@ -23,6 +23,10 @@ MartianRobotTracker.prototype.getRobots = function() {
   return this.robots;
 };
 
+MartianRobotTracker.prototype.getRobotInstructionCompleteStatus = function( robot ) {
+  return robot.hasFinishedInstructions();
+};
+
 module.exports = MartianRobotTracker;
 
 function groupDataByRobot( data ) {

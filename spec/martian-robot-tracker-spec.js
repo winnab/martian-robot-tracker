@@ -27,4 +27,16 @@ describe('MartianRobotTracker', function () {
     expect(tracker.getRobots().length).toEqual(3);
     expect(tracker.getRobots()[0] instanceof Robot).toBeTruthy();
   });
+
+  describe('Tracking a Robot', function() {
+
+    beforeEach(function () {
+      robot = new Robot(['1 1 E', 'RFRFRFRF']);
+    });
+
+    it('knows if the robot has moved from its starting point', function () {
+      var robot = new Robot(['1 1 E', 'RFRFRFRF']);
+      expect(tracker.getRobotInstructionCompleteStatus(robot)).toBe(false);
+    });
+  });
 });
